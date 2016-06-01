@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>10</y>
+      <w>540</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>code::Cliente
+--
+#ci: String
+#nombre: String
+#direccion: String
+#telefono: String
+#patrimonio: Double
+#nroNit: String
+--
++Cliente(String ci, String nombre, String direccion, String telefono, String nroNit): ctor
++mostrarCliente(Cliente cliente): void
++declararPatrimonio(Double patrimonio): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>30</y>
+      <w>340</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>code::Producto
+--
+#codigo: String
+#nombre: String
+#precioVenta: Double
+--
++Producto(String nombre, Double precioVenta): ctor
+#mostrarProducto(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>260</y>
+      <w>170</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>code::Principal
+--
+--
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>350</y>
+      <w>680</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>code::Venta
+--
+#codigo: String
+#fecha = java.util.Calendar.getInstance(): java.util.Calendar
+#descuento: Double
+#cliente: Cliente
+#detalleProductos = new ArrayList&lt;Producto&gt;(): ArrayList&lt;Producto&gt;
+--
++Venta(java.util.Date fecha, Cliente cliente, ArrayList&lt;Producto&gt; detalleProductos, Double descuento): ctor
++totalVenta(): Double
++imprimirFactura(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>210</y>
+      <w>30</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>150</y>
+      <w>30</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
