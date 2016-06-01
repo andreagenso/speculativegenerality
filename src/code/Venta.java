@@ -16,15 +16,7 @@ public class Venta {
 		this.cliente = cliente;
 	}
 	
-	public Double totalVenta()
-	{
-		if (detalleProductos.size() > 0)
-			return ventas();
-		else
-			return 0.0;
-	}
-	
-	public Double ventas() {
+	public Double totalVenta() {
 		Double total = 0.0;
 		
 		for (int i=0;i<detalleProductos.size();i++) {
