@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Venta {
 	protected String codigo;
-	protected java.util.Date fecha = java.util.Calendar.getInstance().getTime();
+	protected java.util.Calendar fecha = java.util.Calendar.getInstance();
 	protected Double descuento;
 	protected Cliente cliente;
 	protected ArrayList<Producto> detalleProductos = new ArrayList<Producto>();
@@ -30,8 +30,8 @@ public class Venta {
 	public void imprimirFactura(){
 		System.out.println("Datos de la venta:");
 		System.out.println("\tCodigo: " + codigo);
-		System.out.println("\tFecha: " + fecha.getDay() + 
-				"/" + fecha.getMonth() + "/" + fecha.getYear());
+		System.out.println("\tFecha: " + fecha.get(java.util.Calendar.DAY_OF_MONTH) + 
+				"/" + fecha.get(java.util.Calendar.MONTH) + "/" + fecha.get(java.util.Calendar.YEAR));
 		System.out.println("\tDescuento: " + descuento);
 		cliente.mostrarCliente(cliente);
 		System.out.println("\tDetalle de productos: ");		
